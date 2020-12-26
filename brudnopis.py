@@ -2,7 +2,7 @@ from functools import reduce
 
 import pandas as pd
 
-x = pd.read_csv('C:\\history_csv_20201222_182633.csv', encoding='ISO 8859-2')
+x = pd.read_csv('C:\\history_csv_20201222_182633.csv', encoding='Windows-1250')
 x['RokMiesiac'] = x['Data operacji'].apply(lambda d: d[:7])
 x['Opis'] = x.apply(lambda r: f"{r['Opis transakcji']} {r['Unnamed: 7']} {r['Unnamed: 8']} {r['Unnamed: 9']} {r['Unnamed: 10']} {r['Unnamed: 11']}", axis=1)
 
